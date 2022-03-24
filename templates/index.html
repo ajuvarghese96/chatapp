@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="text-center">ABC Chat</h1><br>
+<div class="container">
+    <form id="post-form" method="POST" action="checkroom">
+        {% csrf_token %}
+        <label>Room Name</label>
+        <input class="form-control" type="text" name="room_name" id="room_name" /><br>
+        <label>Username</label>
+        <input class="form-control" type="text" name="username" id="username"  /><br>
+        <button type="submit" class="btn btn-success" >Enter Room</button>
+    </form>
+</div>
+{% endblock %}
